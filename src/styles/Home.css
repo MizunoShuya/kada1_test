@@ -1,0 +1,23 @@
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: beige;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: beige;
+}
+
+.search-warning {
+  margin: 20px 0;
+  color: #000000;
+  background-color: beige;
+}
+.text-link {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,43 @@
+nav {
+  font-size :30px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eeee;
+  background-color: rgb(117, 212, 249);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #000000;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+}
+
+li,
+:link {
+  display: inline-block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.link {
+  text-decoration: none;
+  padding: 10px 5px;
+  color: #fff;
+}
+
+
+li:not(:last-child) :link {
+  margin-right: 25px;
+}
