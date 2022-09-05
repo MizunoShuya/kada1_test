@@ -2,7 +2,8 @@ import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 export const MovieContext = createContext(1);
 
-const API_KEY = 'ee563bd8'; // OMDb API Key
+//API Key
+const API_KEY = 'ee563bd8';
 
 const MovieApp = ({children}) => {
 
@@ -19,7 +20,7 @@ const MovieApp = ({children}) => {
     setMovies(data.Search);
   };
 
-  
+
   //削除
   const removeFavoriteMovie = (movie:any) => {
     movie.isFavorite = false;
