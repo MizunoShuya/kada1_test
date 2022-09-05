@@ -6,6 +6,7 @@ import Card from "../components/Card";
 import "../styles/Home.css";
 
 const Home = () => {
+  //データの共有
   const {
     search,
     setSearch,

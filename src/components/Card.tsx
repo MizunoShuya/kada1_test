@@ -6,6 +6,8 @@ import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import { type } from '@testing-library/user-event/dist/type';
 
+
+//映画のポスターカスタマイズ
 // @ts-ignore
 const Card = ({ image, title, addFavorite, isFavorite}) => {
   return (

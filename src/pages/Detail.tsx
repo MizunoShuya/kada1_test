@@ -1,17 +1,15 @@
 import React, { useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { MovieContext } from '../context/MovieContext';
-// @ts-ignore
 import noImage from '../utils/no-image-available.png';
 import '../styles/Detail.css';
 
 const Detail = () => {
-// React Router'daki dinamik URL kısmını almalıyız (useParams)
+//データの共有
 // @ts-ignore
   const { showDetail, selectedMovie } = useContext(MovieContext);
 
   let dynamicUrl = useParams();
-
   useEffect(() => {
     showDetail(dynamicUrl.id);
   }, []);

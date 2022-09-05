@@ -5,6 +5,7 @@ export const MovieContext = createContext(1);
 const API_KEY = 'ee563bd8'; // OMDb API Key
 
 const MovieApp = ({children}) => {
+
   const [favorites, setFavorites] = useState([]);
   const [movies, setMovies] = useState();
   const [search, setSearch] = useState('');
@@ -18,6 +19,8 @@ const MovieApp = ({children}) => {
     setMovies(data.Search);
   };
 
+  
+  //削除
   const removeFavoriteMovie = (movie:any) => {
     movie.isFavorite = false;
     const newFavoriteList = favorites.filter(
@@ -25,7 +28,7 @@ const MovieApp = ({children}) => {
     );
     setFavorites(newFavoriteList);
   };
-
+  //追加
   const addFavoriteMovie = (movie:never) => {
     movie.isFavorite = true;
     const newFavoriteList = [...favorites, movie];

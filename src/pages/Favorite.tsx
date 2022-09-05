@@ -7,7 +7,6 @@ const Favorite = () => {
 
   const { favorites, favoriteHandler } = useContext(MovieContext);
 
-
   return (
     <>
       {favorites?.length ? (
