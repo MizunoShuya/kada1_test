@@ -1,5 +1,6 @@
 import Home from "../pages/Home";
 import Detail from "../pages/Detail";
+import Favorite from '../pages/Favorite';
 
 export const routes = [
   {
@@ -15,5 +16,12 @@ export const routes = [
     component: <Detail />,
     title: "詳細画面",
     isHeaderElement: false,
+  },
+  {
+    path: '/favorite',
+    exact: false,
+    component: <Favorite />,
+    title: 'お気に入り',
+    isHeaderElement: true,
   },
 ];

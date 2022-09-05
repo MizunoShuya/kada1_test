@@ -7,15 +7,10 @@ import "../styles/Home.css";
 
 const Home = () => {
   const {
-      // @ts-ignore
     search,
-      // @ts-ignore
     setSearch,
-      // @ts-ignore
     movies,
-      // @ts-ignore
     favorites,
-      // @ts-ignore
     favoriteHandler,
   } = useContext(MovieContext);
 
@@ -53,7 +48,6 @@ const Home = () => {
                   key={movie.imdbID}
                   image={movie.Poster}
                   title={movie.Title}
-                  year={movie.Year}
                   addFavorite={(e:any) => favoriteHandler(movie, e)}
                   isFavorite={
                     favorites.find((f:any) => f.imdbID === movie.imdbID)

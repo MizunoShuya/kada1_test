@@ -3,8 +3,8 @@ import axios from 'axios';
 export const MovieContext = createContext(1);
 
 const API_KEY = 'ee563bd8'; // OMDb API Key
-// @ts-ignore
-const MovieApp = ({ children }) => {
+
+const MovieApp = ({children}) => {
   const [favorites, setFavorites] = useState([]);
   const [movies, setMovies] = useState();
   const [search, setSearch] = useState('');
@@ -18,25 +18,22 @@ const MovieApp = ({ children }) => {
     setMovies(data.Search);
   };
 
-  const removeFavoriteMovie = (movie: { isFavorite: boolean; imdbID: any; }) => {
+  const removeFavoriteMovie = (movie:any) => {
     movie.isFavorite = false;
     const newFavoriteList = favorites.filter(
-      // @ts-ignore
       (fav) => fav.imdbID !== movie.imdbID
     );
     setFavorites(newFavoriteList);
   };
 
-  const addFavoriteMovie = (movie: { isFavorite: boolean; }) => {
+  const addFavoriteMovie = (movie:never) => {
     movie.isFavorite = true;
     const newFavoriteList = [...favorites, movie];
-    // @ts-ignore
     setFavorites(newFavoriteList);
   };
 
-  const favoriteHandler = (movie:any, e:any) => {
+  const favoriteHandler = (movie:never, e:any) => {
     e.preventDefault();
-    // @ts-ignore
     if (favorites.includes(movie)) {
       removeFavoriteMovie(movie);
     } else {
@@ -44,9 +41,9 @@ const MovieApp = ({ children }) => {
     }
   };
 
-  const showDetail = async (id: any) => {
+  const showDetail = async (id:never) => {
     const response = await axios(
-      `https://www.omdbapi.com/?i=${id}&apikey=${API_KEY}`
+      `https://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`
     );
     const data = response.data;
     setSelectedMovie(data);

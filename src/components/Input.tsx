@@ -1,7 +1,6 @@
 import React from 'react';
-
 import '../styles/Input.css';
-// @ts-ignore
+
 const Input = ({ handleSearch }) => {
   return (
     <div className='input-wrapper'>
