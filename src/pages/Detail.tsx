@@ -18,6 +18,7 @@ const Detail = () => {
     <div className='detail-container'>
       <div className='poster'>
         {selectedMovie.Poster === 'N/A' ? (
+          //imageが無い場合
           <img src={noImage} alt={selectedMovie.Title} />
         ) : (
           <img src={selectedMovie.Poster} alt={selectedMovie.Title} />
