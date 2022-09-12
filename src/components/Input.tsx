@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Input.css';
 
+//検索ボックス
 const Input = ({ handleSearch }) => {
   return (
     <div className='input-wrapper'>

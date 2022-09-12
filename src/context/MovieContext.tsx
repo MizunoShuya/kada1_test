@@ -21,17 +21,20 @@ const MovieApp = ({children}) => {
   };
 
 
-  //削除
+  //削除処理
   const removeFavoriteMovie = (movie:any) => {
     movie.isFavorite = false;
+    //ここの処理をreduxで
     const newFavoriteList = favorites.filter(
       (fav) => fav.imdbID !== movie.imdbID
     );
     setFavorites(newFavoriteList);
   };
-  //追加
+
+  //追加処理
   const addFavoriteMovie = (movie:never) => {
     movie.isFavorite = true;
+    //ここの処理をreduxで
     const newFavoriteList = [...favorites, movie];
     setFavorites(newFavoriteList);
   };
