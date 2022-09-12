@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 //お気に入り画面
 const Favorite = () => {
-  //データの共有
+  //データの共有a
   const { favorites, favoriteHandler } = useContext(MovieContext);
 
   return (
