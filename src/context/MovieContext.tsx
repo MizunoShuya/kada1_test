@@ -1,5 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import store from '../redux/store';
+import { useSelector, useDispatch } from "react-redux";
 export const MovieContext = createContext(1);
 
 //API Key
@@ -7,10 +9,14 @@ const API_KEY = 'ee563bd8';
 
 const MovieApp = ({children}) => {
 
+  const  favorite = useSelector((state) => state.favorite);
+  const dispatch = useDispatch();
+
   const [favorites, setFavorites] = useState([]);
   const [movies, setMovies] = useState();
   const [search, setSearch] = useState('');
   const [selectedMovie, setSelectedMovie] = useState('');
+  
 
   const fetchMovies = async (searchValue: string) => {
     const response = await axios(
@@ -23,20 +29,26 @@ const MovieApp = ({children}) => {
 
   //削除処理
   const removeFavoriteMovie = (movie:any) => {
+    const favoriteid = movie;
     movie.isFavorite = false;
-    //ここの処理をreduxで
-    const newFavoriteList = favorites.filter(
-      (fav) => fav.imdbID !== movie.imdbID
-    );
-    setFavorites(newFavoriteList);
+    dispatch({
+      type: "DELETE_MOVIE",
+      payload: {
+        movie: favoriteid,
+      },
+    });
   };
 
   //追加処理
   const addFavoriteMovie = (movie:never) => {
+    const favoriteid = movie;
     movie.isFavorite = true;
-    //ここの処理をreduxで
-    const newFavoriteList = [...favorites, movie];
-    setFavorites(newFavoriteList);
+    dispatch({
+      type: "ADD_MOVIE",
+      payload: {
+        movie: favoriteid,
+      },
+    });
   };
 
   const favoriteHandler = (movie:never, e:any) => {
@@ -70,8 +82,7 @@ const MovieApp = ({children}) => {
         favoriteHandler,
         showDetail,
         selectedMovie,
-      }}
-    >
+      }}>
       {children}
     </MovieContext.Provider>
   );
