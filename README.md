@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+##使い方
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+yarn install、yarn start でアプリを起動できます。
+
+映画を検索することができます。
+映画のポスター画像をクリックすると映画の詳細を見ることができます。
+ポスター画像の右上にあるお気に入りボタンを押すことでお気に入り登録ができます。
+お気に入り画面でも映画をクリックすると詳細を見ることができます。
 
 ## Available Scripts
 
