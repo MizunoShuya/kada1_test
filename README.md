@@ -9,6 +9,10 @@ yarn install、yarn start でアプリを起動できます。
 さらに、ポスター画像の右上にあるお気に入りボタンを押すことでお気に入り登録ができます。
 また、お気に入り画面でも映画をクリックすると詳細を見ることができます。
 
+## API
+フィルム検索API
+
+
 ## Available Scripts
 
 In the project directory, you can run:
