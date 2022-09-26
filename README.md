@@ -1,3 +1,7 @@
+## 映画検索アプリケーション
+
+React(Hooks)+TypeScriptの基礎学習のために、映画を検索し表示する WEB アプリケーションを作成。
+
 ## 使い方
 
 yarn install、yarn start でアプリを起動できます。
