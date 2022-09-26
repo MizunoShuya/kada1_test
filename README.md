@@ -1,4 +1,4 @@
-##使い方
+## 使い方
 
 yarn install、yarn start でアプリを起動できます。
 
